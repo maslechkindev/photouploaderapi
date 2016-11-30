@@ -1,3 +1,37 @@
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+#app:
+#    resource: "@ApiBundle/Controller/"
+#    type:     annotation
+
+documentation:
+    path:      /documentation/
+    defaults:  { _controller: ApiBundle:Documentation:index }
+
+api_post_image:
+    path:      /image/
+    defaults:  { _controller: ApiBundle:Image:create }
+    methods:  [POST]
+
+api_post_tag:
+    path:      /tag/
+    defaults:  { _controller: ApiBundle:Tag:create }
+    methods:  [POST]
+
+api_delete_tag:
+    path:      /tag/{id}
+    defaults:  { _controller: ApiBundle:Tag:delete }
+    methods:  [delete]
+
+api_get_all_photos:
+    path:      /photos/
+    defaults:  { _controller: ApiBundle:Photo:getAll }
+    methods:  [GET, HEAD]
+
+api_get_photo:
+    path:      /photo/{id}
+    defaults:  { _controller: ApiBundle:Photo:get }
+    methods:  [GET, HEAD]
+
+api_delete_photo:
+    path:      /photo/{id}
+    defaults:  { _controller: ApiBundle:Photo:delete }
+    methods:  [DELETE]
