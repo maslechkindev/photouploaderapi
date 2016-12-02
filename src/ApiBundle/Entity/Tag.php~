@@ -1,0 +1,18 @@
+<?php
+
+namespace ApiBundle\Entity;
+
+class Tag
+{
+    /** @var  integer */
+    private $id;
+
+    /** @var  string */
+    private $name;
+
+    /** @var  string */
+    private $updated;
+
+    /** @var  integer */
+    private $deleted;
+}

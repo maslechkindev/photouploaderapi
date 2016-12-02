@@ -1,0 +1,18 @@
+<?php
+
+namespace ApiBundle\Entity;
+
+class Image
+{
+    /** @var  integer */
+    private $id;
+
+    /** @var  string */
+    private $src;
+
+    /** @var  string */
+    private $updated;
+
+    /** @var  integer */
+    private $deleted;
+}

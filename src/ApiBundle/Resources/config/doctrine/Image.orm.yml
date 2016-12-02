@@ -1,0 +1,18 @@
+# src/ApiBundle/Resources/config/doctrine/Image.orm.yml
+ApiBundle\Entity\Image:
+    type: entity
+    table: image
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        src:
+            type: string
+            length: 255
+        updated:
+            type: string
+            length: 255
+        deleted:
+            type: integer
+            length: 1

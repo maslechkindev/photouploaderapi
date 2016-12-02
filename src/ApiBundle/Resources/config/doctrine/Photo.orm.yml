@@ -1,0 +1,20 @@
+# src/ApiBundle/Resources/config/doctrine/Photo.orm.yml
+ApiBundle\Entity\Photo:
+    type: entity
+    table: photo
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    manyToOne:
+        image:
+          targetEntity: Image
+          joinColumn:
+            name: id_image
+            referencedColumnName: id
+    manyToOne:
+        tag:
+          targetEntity: Tag
+          joinColumn:
+            name: id_tag
+            referencedColumnName: id
